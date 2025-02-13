@@ -3,7 +3,7 @@ import { View, Text,TouchableOpacity, Image, StyleSheet, Dimensions } from "reac
 import LinearGradient from 'react-native-linear-gradient';
 import { useNavigation } from "@react-navigation/native";
 
-const { height, width } = Dimensions.get('window');
+const { width } = Dimensions.get('window');
 
 const OnBoarding = () => {
     const navigation = useNavigation();
@@ -14,7 +14,7 @@ const OnBoarding = () => {
         setComponentIndex((prevIndex) => (prevIndex + 1) % 4);
 
         if(componentIndex === 2) {
-            navigation.navigate('HomeScreen')
+            navigation.navigate('HomeScreeen')
         }
     };
 
