@@ -14,7 +14,7 @@ const OnBoarding = () => {
         setComponentIndex((prevIndex) => (prevIndex + 1) % 4);
 
         if(componentIndex === 2) {
-            navigation.navigate('HomeScreeen')
+            navigation.navigate('HomeScreen')
         }
     };
 
