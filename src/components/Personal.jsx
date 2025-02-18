@@ -114,7 +114,7 @@ const styles = StyleSheet.create({
         flex: 1,
         alignItems: "center",
         justifyContent: "space-between",
-        backgroundColor: "#558c0c",
+        backgroundColor: "#ff00ff",
         paddingTop: height * 0.07,
         padding: 30,
     },
@@ -142,6 +142,7 @@ const styles = StyleSheet.create({
         backgroundColor: "#f0a031",
         flexDirection: "row",
         alignItems: "center",
+        borderTopRightRadius: 0,
     },
 
     bambooIcon: {
@@ -182,6 +183,8 @@ const styles = StyleSheet.create({
         backgroundColor: "#9eca64",
         marginBottom: 12,
         overflow: "hidden",
+        borderTopRightRadius: 0,
+        borderBottomLeftRadius: 0
     },
 
     cardImg: {
@@ -218,6 +221,8 @@ const styles = StyleSheet.create({
         backgroundColor: "#f0a031",
         flexDirection: "row",
         alignItems: "center",
+        borderTopRightRadius: 0,
+        borderBottomLeftRadius: 0
     },
 
     btnText: {

@@ -62,18 +62,21 @@ const OnBoarding = () => {
 };
 
 const styles = StyleSheet.create({
+
     container: {
         flex: 1,
         alignItems: "center",
         justifyContent: "space-between",
-        backgroundColor: "#558c0c",
+        backgroundColor: "#ff00ff",
         paddingBottom: 30
     },
+
     image: {
         width: width,
         height: height * 0.5,
         resizeMode: "cover",
     },
+
     infoContainer: {
         width: "100%",
         alignItems: "center",
@@ -82,8 +85,11 @@ const styles = StyleSheet.create({
         borderWidth: 2,
         borderColor: "#0d430a",
         backgroundColor: "#9eca64",
-        marginBottom: 20
+        marginBottom: 20,
+        borderTopRightRadius: 0,
+        borderBottomLeftRadius: 0
     },
+
     title: {
         fontWeight: "600",
         fontSize: 24,
@@ -91,6 +97,7 @@ const styles = StyleSheet.create({
         textAlign: "center",
         marginBottom: 10,
     },
+
     text: {
         fontWeight: "400",
         fontSize: 16,
@@ -98,22 +105,28 @@ const styles = StyleSheet.create({
         textAlign: "center",
         marginBottom: 20,
     },
+
     button: {
         width: "100%",
         height: 55,
         borderRadius: 20,
         overflow: "hidden",
+        borderTopLeftRadius: 0,
+        borderBottomRightRadius: 0,
     },
+
     buttonGradient: {
         flex: 1,
         justifyContent: "center",
         alignItems: "center",
     },
+
     buttonText: {
         fontWeight: "700",
         fontSize: 18,
         color: "#db151a",
     },
+    
 });
 
 export default OnBoarding;

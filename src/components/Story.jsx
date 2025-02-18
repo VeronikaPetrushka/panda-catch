@@ -27,10 +27,10 @@ const Story = ({ story }) => {
             <Text style={styles.description}>{story.description}</Text>
 
             <View style={{width: '100%', flexDirection: 'row', alignItems: 'center', justifyContent: 'space-between' }}>
-                <TouchableOpacity style={styles.btn} onPress={handleShare}>
+                <TouchableOpacity style={[styles.btn, {borderTopRightRadius: 0, borderBottomLeftRadius: 0}]} onPress={handleShare}>
                     <Text style={styles.btnText}>Share</Text>
                 </TouchableOpacity>
-                <TouchableOpacity style={styles.btn} onPress={() => navigation.goBack('')}>
+                <TouchableOpacity style={[styles.btn, {borderTopLeftRadius: 0, borderBottomRightRadius: 0}]} onPress={() => navigation.goBack('')}>
                     <Text style={styles.btnText}>Close</Text>
                 </TouchableOpacity>
             </View>
@@ -44,7 +44,7 @@ const styles = StyleSheet.create({
     container: {
         flex: 1,
         alignItems: "center",
-        backgroundColor: "#558c0c",
+        backgroundColor: "#ff00ff",
         paddingTop: height * 0.07,
         padding: 30,
     },
@@ -54,7 +54,9 @@ const styles = StyleSheet.create({
         height: 181,
         resizeMode: "cover",
         borderRadius: 22,
-        marginBottom: 7
+        marginBottom: 7,
+        borderTopRightRadius: 0,
+        borderBottomLeftRadius: 0
     },
 
     name: {

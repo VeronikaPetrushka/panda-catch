@@ -9,7 +9,7 @@ import OnBoardingScreen from './src/screens/OnBoardingScreen';
 import HomeScreen from './src/screens/HomeScreen';
 import PersonalScreen from './src/screens/PersonalScreen';
 import ShopScreen from './src/screens/ShopScreen';
-import GameScreen from './src/screens/GameScreen';
+import PandaScreen from './src/screens/PandaScreen';
 import StoryScreen from './src/screens/StoryScreen';
 
 enableScreens();
@@ -96,8 +96,8 @@ const App = () => {
                                     options={{ headerShown: false }} 
                               />
                               <Stack.Screen 
-                                    name="GameScreen" 
-                                    component={GameScreen} 
+                                    name="PandaScreen" 
+                                    component={PandaScreen} 
                                     options={{ headerShown: false }} 
                               />
                               <Stack.Screen 
@@ -117,7 +117,7 @@ const styles = StyleSheet.create({
           flex: 1,
           alignItems: 'center',
           justifyContent: 'center',
-          backgroundColor: '#558c0c',
+          backgroundColor: '#ff00ff',
       },
       imageContainer: {
           width: '100%',
@@ -134,7 +134,7 @@ const styles = StyleSheet.create({
           bottom: '24%',
           fontSize: 32,
           fontWeight: "900",
-          color: "#db151a",
+          color: "#ec9925",
           marginBottom: 25,
           textAlign: 'center',
           zIndex: 10

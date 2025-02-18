@@ -10,7 +10,7 @@ const bamboo = require('../assets/game/bamboo.png');
 const rock = require('../assets/game/rock.png');
 const panda = require('../assets/game/panda.png');
 
-const Game = () => {
+const Panda = () => {
     const navigation = useNavigation();
     const [gameScore, setGameScore] = useState(0);
     const [lives, setLives] = useState(3);
@@ -165,20 +165,20 @@ const Game = () => {
                         <View style={[styles.scoreContainer, {paddingVertical: 12, paddingHorizontal: 70, borderRadius: 26, marginBottom: 30}]}>
                             <Text style={styles.score}>{gameScore}</Text>
                         </View>
-                        <TouchableOpacity style={{width: 277, height: 72, borderRadius: 26, alignItems: 'center', justifyContent: 'center', marginBottom: 15}} onPress={restartGame}>
+                        <TouchableOpacity style={{width: 277, height: 72, borderRadius: 26, alignItems: 'center', justifyContent: 'center', marginBottom: 15, borderBottomRightRadius: 0, borderBottomLeftRadius: 0 }} onPress={restartGame}>
                             <LinearGradient
                                 colors={['#ffbd60', '#ec9925']}
-                                style={{width: 277, height: 72, borderRadius: 26, alignItems: 'center', justifyContent: 'center'}} onPress={restartGame} 
+                                style={{width: 277, height: 72, borderRadius: 26, alignItems: 'center', justifyContent: 'center', borderBottomRightRadius: 0, borderBottomLeftRadius: 0}} onPress={restartGame} 
                                 start={{ x: 1, y: 0 }}
                                 end={{ x: 0, y: 0 }}
                             >
                                 <Text style={[styles.score, {fontWeight: '700', fontSize: 17}]}>Try Again</Text>
                             </LinearGradient>
                         </TouchableOpacity>
-                        <TouchableOpacity style={{width: 277, height: 72, borderRadius: 26, alignItems: 'center', justifyContent: 'center', marginBottom: 15}} onPress={() => navigation.navigate('HomeScreen')}>
+                        <TouchableOpacity style={{width: 277, height: 72, borderRadius: 26, alignItems: 'center', justifyContent: 'center', marginBottom: 15, borderTopLeftRadius: 0, borderTopRightRadius: 0,}} onPress={() => navigation.navigate('HomeScreen')}>
                             <LinearGradient
                                 colors={['#ffbd60', '#ec9925']}
-                                style={{width: 277, height: 72, borderRadius: 26, alignItems: 'center', justifyContent: 'center'}} 
+                                style={{width: 277, height: 72, borderRadius: 26, alignItems: 'center', justifyContent: 'center', borderTopLeftRadius: 0, borderTopRightRadius: 0,}} 
                                 start={{ x: 1, y: 0 }}
                                 end={{ x: 0, y: 0 }}
                             >
@@ -202,7 +202,7 @@ const styles = StyleSheet.create({
         paddingTop: height * 0.07,
         justifyContent: 'space-between',
         paddingBottom: 70,
-        backgroundColor: '#558c0c'
+        backgroundColor: '#ff00ff'
     },
 
     header: {
@@ -278,5 +278,5 @@ const styles = StyleSheet.create({
 
 });
 
-export default Game;
+export default Panda;
 

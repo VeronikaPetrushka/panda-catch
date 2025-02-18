@@ -1,10 +1,10 @@
 import { View } from "react-native"
-import Game from "../components/Game"
+import Panda from "../components/Panda"
 
-const GameScreen = () => {
+const PandaScreen = () => {
     return (
         <View style={styles.container}>
-            <Game />
+            <Panda />
         </View>
     )
 }; 
@@ -16,4 +16,4 @@ const styles = {
     }
 }
 
-export default GameScreen;
+export default PandaScreen;

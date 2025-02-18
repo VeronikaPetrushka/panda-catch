@@ -71,7 +71,7 @@ const Home = () => {
 
             if (currentProgress >= progressIncrement) {
                 clearInterval(progressInterval);
-                navigation.navigate('GameScreen');
+                navigation.navigate('PandaScreen');
             }
         }, intervalDuration);
 
@@ -112,7 +112,7 @@ const Home = () => {
                         </View>
                         {start && currentTipIndex < tips.length && (
                             <Animated.View style={[styles.card, { opacity: fadeAnim }]}>
-                                <Text style={styles.title}>Tip #{currentTipIndex + 1}</Text>
+                                <Text style={[styles.title, {color: '#db151a'}]}>Tip #{currentTipIndex + 1}</Text>
                                 <Text style={styles.tip}>{tips[currentTipIndex]}</Text>
                             </Animated.View>
                         )}
@@ -133,7 +133,7 @@ const Home = () => {
                         </View>
                         {!start && currentTipIndex === 0 && (
                             <Animated.View style={[styles.card, { opacity: fadeAnim }]}>
-                                <Text style={styles.title}>Tip #1</Text>
+                                <Text style={[styles.title, {color: '#db151a'}]}>Tip #1</Text>
                                 <Text style={styles.tip}>{tips[0]}</Text>
                             </Animated.View>
                         )}
@@ -154,7 +154,7 @@ const styles = StyleSheet.create({
     container: {
         flex: 1,
         alignItems: 'center',
-        backgroundColor: '#558c0c',
+        backgroundColor: '#ff00ff',
         justifyContent: 'space-between',
     },
 
@@ -169,7 +169,8 @@ const styles = StyleSheet.create({
         alignItems: "center",
         position: 'absolute', 
         top: height * 0.07,
-        right: 30
+        right: 30,
+        borderTopRightRadius: 0,
     },
 
     bambooIcon: {
@@ -212,12 +213,14 @@ const styles = StyleSheet.create({
         marginBottom: 12,
         paddingVertical: 25,
         paddingHorizontal: 8,
+        borderTopRightRadius: 0,
+        borderBottomLeftRadius: 0
     },
 
     title: {
         fontSize: 22,
         fontWeight: "500",
-        color: "#db151a",
+        color: "#ec9925",
         marginBottom: 25,
         textAlign: 'center'
     },
