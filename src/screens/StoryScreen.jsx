@@ -1,6 +1,6 @@
 import { View } from "react-native"
 import Story from "../components/Story"
-import Menu from "../components/Menu";
+import Panel from "../components/Panel";
 
 const StoryScreen = ({ route }) => {
     const { story } = route.params;
@@ -9,7 +9,7 @@ const StoryScreen = ({ route }) => {
         <View style={styles.container}>
             <Story story={story} />
             <View style={styles.menu}>
-                <Menu />
+                <Panel />
             </View>
         </View>
     )

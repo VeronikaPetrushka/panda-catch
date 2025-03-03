@@ -6,7 +6,7 @@ import { useNavigation } from "@react-navigation/native";
 
 const { height } = Dimensions.get("window");
 
-const Shop = () => {
+const Shp = () => {
     const navigation = useNavigation();
     const [score, setScore] = useState(0);
     const [unlockedStories, setUnlockedStories] = useState([]);
@@ -102,7 +102,7 @@ const styles = StyleSheet.create({
         flex: 1,
         alignItems: "center",
         justifyContent: "space-between",
-        backgroundColor: "#ff00ff",
+        backgroundColor: "#015f03",
         paddingTop: height * 0.07,
         padding: 30,
     },
@@ -210,4 +210,4 @@ const styles = StyleSheet.create({
     
 });
 
-export default Shop;
+export default Shp;

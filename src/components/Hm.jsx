@@ -4,11 +4,11 @@ import AsyncStorage from "@react-native-async-storage/async-storage";
 import LinearGradient from 'react-native-linear-gradient';
 import { useNavigation } from "@react-navigation/native";
 import tips from "../constants/tips";
-import Menu from "./Menu";
+import Menu from "./Panel";
 
 const { height } = Dimensions.get('window');
 
-const Home = () => {
+const Hm = () => {
     const [score, setScore] = useState(0);
     const [maxScore, setMaxScore] = useState('0000');
     const [start, setStart] = useState(false);
@@ -154,7 +154,7 @@ const styles = StyleSheet.create({
     container: {
         flex: 1,
         alignItems: 'center',
-        backgroundColor: '#ff00ff',
+        backgroundColor: '#015f03',
         justifyContent: 'space-between',
     },
 
@@ -263,4 +263,4 @@ const styles = StyleSheet.create({
     
 });
 
-export default Home;
+export default Hm;

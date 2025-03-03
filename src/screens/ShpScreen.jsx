@@ -1,13 +1,13 @@
 import { View } from "react-native"
-import Shop from "../components/Shop"
-import Menu from "../components/Menu";
+import Shp from "../components/Shp"
+import Panel from "../components/Panel";
 
-const ShopScreen = () => {
+const ShpScreen = () => {
     return (
         <View style={styles.container}>
-            <Shop />
+            <Shp />
             <View style={styles.menu}>
-                <Menu />
+                <Panel />
             </View>
         </View>
     )
@@ -26,4 +26,4 @@ const styles = {
     }
 }
 
-export default ShopScreen;
+export default ShpScreen;

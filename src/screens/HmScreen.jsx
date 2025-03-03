@@ -1,10 +1,10 @@
 import { View } from "react-native"
-import Home from "../components/Home"
+import Hm from "../components/Hm"
 
-const HomeScreen = () => {
+const HmScreen = () => {
     return (
         <View style={styles.container}>
-            <Home />
+            <Hm />
         </View>
     )
 }; 
@@ -16,4 +16,4 @@ const styles = {
     }
 }
 
-export default HomeScreen;
+export default HmScreen;

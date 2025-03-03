@@ -202,7 +202,7 @@ const styles = StyleSheet.create({
         paddingTop: height * 0.07,
         justifyContent: 'space-between',
         paddingBottom: 70,
-        backgroundColor: '#ff00ff'
+        backgroundColor: '#015f03'
     },
 
     header: {

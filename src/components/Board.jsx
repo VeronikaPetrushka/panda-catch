@@ -5,7 +5,28 @@ import { useNavigation } from "@react-navigation/native";
 
 const { width, height } = Dimensions.get("window");
 
-const OnBoarding = () => {
+const imgs = [
+    require("../assets/onboarding/1.png"),
+    require("../assets/onboarding/2.png"),
+    require("../assets/onboarding/3.png"),
+    require("../assets/onboarding/4.png")
+];
+
+const ttls = [
+    "Welcome to Panda Catch!",
+    "Catch bamboo to earn points!",
+    "Your panda has three lives",
+    "Ready to play?"
+];
+
+const desc = [
+    "Help the cute panda collect as much bamboo as possible, avoid the falling rocks, and unlock exciting new stories!",
+    "Avoid the rocks as they reduce your health. The more bamboo you catch, the higher your score!",
+    "Use your points to purchase fun stories about pandas and bamboo!",
+    "Let’s start collecting bamboo! Play, catch, and unlock new adventures!"
+];
+
+const Board = () => {
     const navigation = useNavigation();
     const [step, setStep] = useState(0);
 
@@ -13,50 +34,35 @@ const OnBoarding = () => {
         if (step < 3) {
             setStep(prevStep => prevStep + 1);
         } else {
-            navigation.navigate("HomeScreeen");
+            navigation.navigate("HmScreen");
         }
     };
 
-    const images = [
-        require("../assets/onboarding/1.png"),
-        require("../assets/onboarding/2.png"),
-        require("../assets/onboarding/3.png"),
-        require("../assets/onboarding/4.png")
-    ];
-
-    const titles = [
-        "Welcome to Panda Catch!",
-        "Catch bamboo to earn points!",
-        "Your panda has three lives",
-        "Ready to play?"
-    ];
-
-    const descriptions = [
-        "Help the cute panda collect as much bamboo as possible, avoid the falling rocks, and unlock exciting new stories!",
-        "Avoid the rocks as they reduce your health. The more bamboo you catch, the higher your score!",
-        "Use your points to purchase fun stories about pandas and bamboo!",
-        "Let’s start collecting bamboo! Play, catch, and unlock new adventures!"
-    ];
-
     return (
         <View style={styles.container}>
-            <Image source={images[step]} style={styles.image} />
+
+            <Image source={imgs[step]} style={styles.image} />
+
             <View style={{width: '100%', paddingHorizontal: 20}}>
+
                 <View style={styles.infoContainer}>
-                    <Text style={styles.title}>{titles[step]}</Text>
-                    <Text style={styles.text}>{descriptions[step]}</Text>
+                    <Text style={styles.title}>{ttls[step]}</Text>
+                    <Text style={styles.text}>{desc[step]}</Text>
                 </View>
-                <TouchableOpacity style={styles.button} onPress={handleNext}>
+
+                <TouchableOpacity style={styles.btn} onPress={handleNext}>
                     <LinearGradient
                         colors={["#ffbd60", "#ec9925"]}
-                        style={styles.buttonGradient}
+                        style={styles.gradient}
                         start={{ x: 1, y: 0 }}
                         end={{ x: 0, y: 0 }}
                     >
-                        <Text style={styles.buttonText}>{step < 3 ? "Next" : "Let’s Play!"}</Text>
+                        <Text style={styles.btnText}>{step < 3 ? "Next" : "Let’s Play!"}</Text>
                     </LinearGradient>
                 </TouchableOpacity>
+
             </View>
+
         </View>
     );
 };
@@ -67,7 +73,7 @@ const styles = StyleSheet.create({
         flex: 1,
         alignItems: "center",
         justifyContent: "space-between",
-        backgroundColor: "#ff00ff",
+        backgroundColor: "#015f03",
         paddingBottom: 30
     },
 
@@ -106,7 +112,7 @@ const styles = StyleSheet.create({
         marginBottom: 20,
     },
 
-    button: {
+    btn: {
         width: "100%",
         height: 55,
         borderRadius: 20,
@@ -115,13 +121,13 @@ const styles = StyleSheet.create({
         borderBottomRightRadius: 0,
     },
 
-    buttonGradient: {
+    gradient: {
         flex: 1,
         justifyContent: "center",
         alignItems: "center",
     },
 
-    buttonText: {
+    btnText: {
         fontWeight: "700",
         fontSize: 18,
         color: "#db151a",
@@ -129,4 +135,4 @@ const styles = StyleSheet.create({
     
 });
 
-export default OnBoarding;
+export default Board;

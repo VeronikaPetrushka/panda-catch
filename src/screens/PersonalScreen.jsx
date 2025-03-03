@@ -1,13 +1,13 @@
 import { View } from "react-native"
 import Personal from "../components/Personal"
-import Menu from "../components/Menu";
+import Panel from "../components/Panel";
 
 const PersonalScreen = () => {
     return (
         <View style={styles.container}>
             <Personal />
             <View style={styles.menu}>
-                <Menu />
+                <Panel />
             </View>
         </View>
     )

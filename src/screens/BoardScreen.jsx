@@ -1,10 +1,10 @@
 import { View } from "react-native"
-import OnBoarding from "../components/OnBoarding"
+import Board from "../components/Board"
 
-const OnBoardingScreen = () => {
+const BoardScreen = () => {
     return (
         <View style={styles.container}>
-            <OnBoarding />
+            <Board />
         </View>
     )
 }; 
@@ -16,4 +16,4 @@ const styles = {
     }
 }
 
-export default OnBoardingScreen;
+export default BoardScreen;

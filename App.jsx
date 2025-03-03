@@ -5,10 +5,10 @@ import { enableScreens } from 'react-native-screens';
 import { NavigationContainer } from '@react-navigation/native';
 import { createStackNavigator } from '@react-navigation/stack';
 
-import OnBoardingScreen from './src/screens/OnBoardingScreen';
-import HomeScreen from './src/screens/HomeScreen';
+import BoardScreen from './src/screens/BoardScreen';
+import HmScreen from './src/screens/HmScreen';
 import PersonalScreen from './src/screens/PersonalScreen';
-import ShopScreen from './src/screens/ShopScreen';
+import ShpScreen from './src/screens/ShpScreen';
 import PandaScreen from './src/screens/PandaScreen';
 import StoryScreen from './src/screens/StoryScreen';
 
@@ -74,15 +74,15 @@ const App = () => {
                         </ImageBackground>
                     </View>
                 ) : (
-                        <Stack.Navigator initialRouteName={"OnBoardingScreen" }>
+                        <Stack.Navigator initialRouteName={"BoardScreen" }>
                               <Stack.Screen 
-                                    name="OnBoardingScreen" 
-                                    component={OnBoardingScreen} 
+                                    name="BoardScreen" 
+                                    component={BoardScreen} 
                                     options={{ headerShown: false }} 
                               />
                               <Stack.Screen 
-                                    name="HomeScreen" 
-                                    component={HomeScreen} 
+                                    name="HmScreen" 
+                                    component={HmScreen} 
                                     options={{ headerShown: false }} 
                               />
                               <Stack.Screen 
@@ -91,8 +91,8 @@ const App = () => {
                                     options={{ headerShown: false }} 
                               />
                               <Stack.Screen 
-                                    name="ShopScreen" 
-                                    component={ShopScreen} 
+                                    name="ShpScreen" 
+                                    component={ShpScreen} 
                                     options={{ headerShown: false }} 
                               />
                               <Stack.Screen 
@@ -117,7 +117,7 @@ const styles = StyleSheet.create({
           flex: 1,
           alignItems: 'center',
           justifyContent: 'center',
-          backgroundColor: '#ff00ff',
+          backgroundColor: '#015f03',
       },
       imageContainer: {
           width: '100%',

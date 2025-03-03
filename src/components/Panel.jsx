@@ -3,9 +3,9 @@ import { TouchableOpacity, StyleSheet, View } from "react-native";
 import { useNavigation } from '@react-navigation/native';
 import Icons from './Icons';
 
-const Menu = ({ start }) => {
+const Panel = ({ start }) => {
     const navigation = useNavigation();
-    const [activeButton, setActiveButton] = useState('HomeScreen');
+    const [activeButton, setActiveButton] = useState('HmScreen');
 
     const handleNavigate = (screen) => {
         setActiveButton(screen);
@@ -22,10 +22,10 @@ const Menu = ({ start }) => {
     }, [navigation]);
 
     const handleHomeStart = () => {
-        if(activeButton === 'HomeScreen') {
+        if(activeButton === 'HmScreen') {
             start();
         } else {
-            navigation.navigate('HomeScreen')
+            navigation.navigate('HmScreen')
         }
     }
 
@@ -34,20 +34,20 @@ const Menu = ({ start }) => {
 
             <TouchableOpacity 
                 style={[styles.button, {padding: 8.5}]} 
-                onPress={() => handleNavigate('ShopScreen')}>
-                    <Icons type={'1'} active={activeButton === 'ShopScreen'}/>
+                onPress={() => handleNavigate('Sh0pScreen')}>
+                    <Icons type={'1'} active={activeButton === 'Sh0pScreen'}/>
             </TouchableOpacity>
 
             <TouchableOpacity 
                 style={styles.homeBtn} 
                 onPress={handleHomeStart}>
-                    <Icons type={'2'} active={activeButton === 'HomeScreen'}/>
+                    <Icons type={'2'} active={activeButton === 'HmScreen'}/>
             </TouchableOpacity>
 
             <TouchableOpacity 
                 style={styles.button} 
-                onPress={() => handleNavigate('PersonalScreen')}>
-                    <Icons type={'3'} active={activeButton === 'PersonalScreen'}/>
+                onPress={() => handleNavigate('Pers0nalScreen')}>
+                    <Icons type={'3'} active={activeButton === 'Pers0nalScreen'}/>
             </TouchableOpacity>
 
         </View>
@@ -85,4 +85,4 @@ const styles = StyleSheet.create({
     }
 });
 
-export default Menu;
+export default Panel;
