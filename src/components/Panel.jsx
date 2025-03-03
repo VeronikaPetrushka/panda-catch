@@ -34,8 +34,8 @@ const Panel = ({ start }) => {
 
             <TouchableOpacity 
                 style={[styles.button, {padding: 8.5}]} 
-                onPress={() => handleNavigate('Sh0pScreen')}>
-                    <Icons type={'1'} active={activeButton === 'Sh0pScreen'}/>
+                onPress={() => handleNavigate('ShpScreen')}>
+                    <Icons type={'1'} active={activeButton === 'ShpScreen'}/>
             </TouchableOpacity>
 
             <TouchableOpacity 
@@ -46,8 +46,8 @@ const Panel = ({ start }) => {
 
             <TouchableOpacity 
                 style={styles.button} 
-                onPress={() => handleNavigate('Pers0nalScreen')}>
-                    <Icons type={'3'} active={activeButton === 'Pers0nalScreen'}/>
+                onPress={() => handleNavigate('PersonalScreen')}>
+                    <Icons type={'3'} active={activeButton === 'PersonalScreen'}/>
             </TouchableOpacity>
 
         </View>

@@ -31,8 +31,8 @@ const Shp = () => {
     };
 
     const unlockStory = async (story) => {
-        if (score >= 188) {
-            const newScore = score - 188;
+        if (score >= 0) {
+            const newScore = score - 0;
     
             const updatedStories = [...unlockedStories, { ...story, unlocked: true }];
     
@@ -60,7 +60,7 @@ const Shp = () => {
             <ScrollView style={{ width: "100%" }}>
                 {stories.map((story, index) => {
                     const isUnlocked = unlockedStories.some(unlockedStory => unlockedStory.name === story.name && unlockedStory.unlocked);
-                    const canBuy = score >= 188;
+                    const canBuy = score >= 0;
 
                     return (
                         <View key={index} style={styles.card}>

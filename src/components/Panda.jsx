@@ -175,7 +175,7 @@ const Panda = () => {
                                 <Text style={[styles.score, {fontWeight: '700', fontSize: 17}]}>Try Again</Text>
                             </LinearGradient>
                         </TouchableOpacity>
-                        <TouchableOpacity style={{width: 277, height: 72, borderRadius: 26, alignItems: 'center', justifyContent: 'center', marginBottom: 15, borderTopLeftRadius: 0, borderTopRightRadius: 0,}} onPress={() => navigation.navigate('HomeScreen')}>
+                        <TouchableOpacity style={{width: 277, height: 72, borderRadius: 26, alignItems: 'center', justifyContent: 'center', marginBottom: 15, borderTopLeftRadius: 0, borderTopRightRadius: 0,}} onPress={() => navigation.navigate('HmScreen')}>
                             <LinearGradient
                                 colors={['#ffbd60', '#ec9925']}
                                 style={{width: 277, height: 72, borderRadius: 26, alignItems: 'center', justifyContent: 'center', borderTopLeftRadius: 0, borderTopRightRadius: 0,}} 
