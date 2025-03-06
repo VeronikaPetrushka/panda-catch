@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { View, Text, TouchableOpacity, Image, StyleSheet, Dimensions, ScrollView } from "react-native";
 import AsyncStorage from "@react-native-async-storage/async-storage";
-import LinearGradient from 'react-native-linear-gradient';
 import { useNavigation } from "@react-navigation/native";
 
 const { height } = Dimensions.get("window");
@@ -66,14 +65,7 @@ const Personal = () => {
             <Image source={require('../assets/game/crown.png')} style={{width: 60, height: 60, resizeMode: 'contain', marginBottom: 10}} />
             <Text style={styles.maxScoreText}>Max score:</Text>
             <View style={[styles.maxScoreContainer, {marginBottom: 21}]}>
-                <LinearGradient
-                    colors={['#ffbd60', '#ec9925']}
-                    style={styles.maxScoreContainer} 
-                    start={{ x: 1, y: 0 }}
-                    end={{ x: 0, y: 0 }}
-                >
-                    <Text style={styles.score}>{maxScore}</Text>
-                </LinearGradient>
+                <Text style={styles.score}>{maxScore}</Text>
             </View>
 
             {
@@ -114,7 +106,7 @@ const styles = StyleSheet.create({
         flex: 1,
         alignItems: "center",
         justifyContent: "space-between",
-        backgroundColor: "#015f03",
+        backgroundColor: "#e41ade",
         paddingTop: height * 0.07,
         padding: 30,
     },
@@ -174,6 +166,7 @@ const styles = StyleSheet.create({
         borderRadius: 22,
         borderWidth: 0.5,
         borderColor: '#b56a00',
+        backgroundColor: '#ffbd60'
     },
 
     card: {

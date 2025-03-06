@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from "react"
 import { View, Text, Image, StyleSheet, Dimensions, Animated } from "react-native"
 import AsyncStorage from "@react-native-async-storage/async-storage";
-import LinearGradient from 'react-native-linear-gradient';
 import { useNavigation } from "@react-navigation/native";
 import tips from "../constants/tips";
 import Menu from "./Panel";
@@ -122,14 +121,7 @@ const Hm = () => {
                         <Image source={require('../assets/game/crown.png')} style={{width: 60, height: 60, resizeMode: 'contain', marginBottom: 5}} />
                         <Text style={styles.maxScoreText}>Max score:</Text>
                         <View style={[styles.maxScoreContainer, {marginBottom: 10}]}>
-                            <LinearGradient
-                                colors={['#ffbd60', '#ec9925']}
-                                style={styles.maxScoreContainer} 
-                                start={{ x: 1, y: 0 }}
-                                end={{ x: 0, y: 0 }}
-                            >
-                                <Text style={styles.score}>{maxScore}</Text>
-                            </LinearGradient>
+                            <Text style={styles.score}>{maxScore}</Text>
                         </View>
                         {!start && currentTipIndex === 0 && (
                             <Animated.View style={[styles.card, { opacity: fadeAnim }]}>
@@ -154,7 +146,7 @@ const styles = StyleSheet.create({
     container: {
         flex: 1,
         alignItems: 'center',
-        backgroundColor: '#015f03',
+        backgroundColor: '#e41ade',
         justifyContent: 'space-between',
     },
 
@@ -202,6 +194,7 @@ const styles = StyleSheet.create({
         borderRadius: 22,
         borderWidth: 0.5,
         borderColor: '#b56a00',
+        backgroundColor: '#ffbd60'
     },
 
     card: {

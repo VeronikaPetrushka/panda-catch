@@ -1,6 +1,5 @@
 import React, { useState } from "react";
 import { View, Text, TouchableOpacity, Image, StyleSheet, Dimensions } from "react-native";
-import LinearGradient from "react-native-linear-gradient";
 import { useNavigation } from "@react-navigation/native";
 
 const { width, height } = Dimensions.get("window");
@@ -51,14 +50,7 @@ const Board = () => {
                 </View>
 
                 <TouchableOpacity style={styles.btn} onPress={handleNext}>
-                    <LinearGradient
-                        colors={["#ffbd60", "#ec9925"]}
-                        style={styles.gradient}
-                        start={{ x: 1, y: 0 }}
-                        end={{ x: 0, y: 0 }}
-                    >
-                        <Text style={styles.btnText}>{step < 3 ? "Next" : "Let’s Play!"}</Text>
-                    </LinearGradient>
+                    <Text style={styles.btnText}>{step < 3 ? "Next" : "Let’s Play!"}</Text>
                 </TouchableOpacity>
 
             </View>
@@ -73,7 +65,7 @@ const styles = StyleSheet.create({
         flex: 1,
         alignItems: "center",
         justifyContent: "space-between",
-        backgroundColor: "#015f03",
+        backgroundColor: "#e41ade",
         paddingBottom: 30
     },
 
@@ -119,10 +111,7 @@ const styles = StyleSheet.create({
         overflow: "hidden",
         borderTopLeftRadius: 0,
         borderBottomRightRadius: 0,
-    },
-
-    gradient: {
-        flex: 1,
+        backgroundColor: '#ec9925',
         justifyContent: "center",
         alignItems: "center",
     },

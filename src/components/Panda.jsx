@@ -1,7 +1,6 @@
 import React, { useState, useEffect, useRef } from "react";
 import { View, Text, Image, Animated, PanResponder, Dimensions, StyleSheet, TouchableOpacity } from "react-native";
 import AsyncStorage from "@react-native-async-storage/async-storage";
-import LinearGradient from 'react-native-linear-gradient';
 import { useNavigation } from "@react-navigation/native";
 
 const { height, width } = Dimensions.get('window');
@@ -165,25 +164,11 @@ const Panda = () => {
                         <View style={[styles.scoreContainer, {paddingVertical: 12, paddingHorizontal: 70, borderRadius: 26, marginBottom: 30}]}>
                             <Text style={styles.score}>{gameScore}</Text>
                         </View>
-                        <TouchableOpacity style={{width: 277, height: 72, borderRadius: 26, alignItems: 'center', justifyContent: 'center', marginBottom: 15, borderBottomRightRadius: 0, borderBottomLeftRadius: 0 }} onPress={restartGame}>
-                            <LinearGradient
-                                colors={['#ffbd60', '#ec9925']}
-                                style={{width: 277, height: 72, borderRadius: 26, alignItems: 'center', justifyContent: 'center', borderBottomRightRadius: 0, borderBottomLeftRadius: 0}} onPress={restartGame} 
-                                start={{ x: 1, y: 0 }}
-                                end={{ x: 0, y: 0 }}
-                            >
-                                <Text style={[styles.score, {fontWeight: '700', fontSize: 17}]}>Try Again</Text>
-                            </LinearGradient>
+                        <TouchableOpacity style={{width: 277, height: 72, borderRadius: 26, alignItems: 'center', justifyContent: 'center', marginBottom: 15, borderBottomRightRadius: 0, borderBottomLeftRadius: 0, backgroundColor: '#ffbd60' }} onPress={restartGame}>
+                            <Text style={[styles.score, {fontWeight: '700', fontSize: 17}]}>Try Again</Text>
                         </TouchableOpacity>
-                        <TouchableOpacity style={{width: 277, height: 72, borderRadius: 26, alignItems: 'center', justifyContent: 'center', marginBottom: 15, borderTopLeftRadius: 0, borderTopRightRadius: 0,}} onPress={() => navigation.navigate('HmScreen')}>
-                            <LinearGradient
-                                colors={['#ffbd60', '#ec9925']}
-                                style={{width: 277, height: 72, borderRadius: 26, alignItems: 'center', justifyContent: 'center', borderTopLeftRadius: 0, borderTopRightRadius: 0,}} 
-                                start={{ x: 1, y: 0 }}
-                                end={{ x: 0, y: 0 }}
-                            >
-                                <Text style={[styles.score, {fontWeight: '700', fontSize: 17}]}>Go Home</Text>
-                            </LinearGradient>
+                        <TouchableOpacity style={{width: 277, height: 72, borderRadius: 26, alignItems: 'center', justifyContent: 'center', marginBottom: 15, borderTopLeftRadius: 0, borderTopRightRadius: 0, backgroundColor: '#ffbd60' }} onPress={() => navigation.navigate('HmScreen')}>
+                            <Text style={[styles.score, {fontWeight: '700', fontSize: 17}]}>Go Home</Text>
                         </TouchableOpacity>
                     </View>
                 </View>
@@ -202,7 +187,7 @@ const styles = StyleSheet.create({
         paddingTop: height * 0.07,
         justifyContent: 'space-between',
         paddingBottom: 70,
-        backgroundColor: '#015f03'
+        backgroundColor: '#e41ade'
     },
 
     header: {

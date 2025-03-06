@@ -34,8 +34,8 @@ const Panel = ({ start }) => {
 
             <TouchableOpacity 
                 style={[styles.button, {padding: 8.5}]} 
-                onPress={() => handleNavigate('ShpScreen')}>
-                    <Icons type={'1'} active={activeButton === 'ShpScreen'}/>
+                onPress={() => handleNavigate('Sh0pScreen')}>
+                    <Icons type={'1'} active={activeButton === 'Sh0pScreen'}/>
             </TouchableOpacity>
 
             <TouchableOpacity 
