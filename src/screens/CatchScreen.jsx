@@ -1,10 +1,10 @@
 import { View } from "react-native"
-import Panda from "../components/Panda"
+import Catch from "../components/Catch"
 
-const PandaScreen = () => {
+const CatchScreen = () => {
     return (
         <View style={styles.container}>
-            <Panda />
+            <Catch />
         </View>
     )
 }; 
@@ -16,4 +16,4 @@ const styles = {
     }
 }
 
-export default PandaScreen;
+export default CatchScreen;

@@ -70,7 +70,7 @@ const Hm = () => {
 
             if (currentProgress >= progressIncrement) {
                 clearInterval(progressInterval);
-                navigation.navigate('PandaScreen');
+                navigation.navigate('CatchScreen');
             }
         }, intervalDuration);
 

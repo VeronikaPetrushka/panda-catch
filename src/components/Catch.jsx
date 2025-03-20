@@ -2,24 +2,39 @@ import React, { useState, useEffect, useRef } from "react";
 import { View, Text, Image, Animated, PanResponder, Dimensions, StyleSheet, TouchableOpacity } from "react-native";
 import AsyncStorage from "@react-native-async-storage/async-storage";
 import { useNavigation } from "@react-navigation/native";
+import skins from "../constants/skins";
 
 const { height, width } = Dimensions.get('window');
 
 const bamboo = require('../assets/game/bamboo.png');
 const rock = require('../assets/game/rock.png');
-const panda = require('../assets/game/panda.png');
 
-const Panda = () => {
+const Catch = () => {
     const navigation = useNavigation();
     const [gameScore, setGameScore] = useState(0);
     const [lives, setLives] = useState(3);
     const [fallingItems, setFallingItems] = useState([]);
     const [gameOver, setGameOver] = useState(false);
     const [showRedOverlay, setShowRedOverlay] = useState(false);
+    const [currentSkin, setCurrentSkin] = useState(skins[0].image);
 
     const pandaWidth = 80;
     const pandaX = useRef(new Animated.Value(width / 2 - pandaWidth / 2)).current;
     const pandaXRef = useRef(pandaX._value);
+
+    useEffect(() => {
+        loadCurrentSkin();
+    }, []);
+
+    const loadCurrentSkin = async () => {
+        const storedSkin = await AsyncStorage.getItem("currentSkin");
+        if (storedSkin !== null) {
+            setCurrentSkin(JSON.parse(storedSkin));
+        } else {
+            setCurrentSkin(skins[0]);
+            await AsyncStorage.setItem("currentSkin", JSON.stringify(skins[0]));
+        }
+    };
 
     useEffect(() => {
         if (!gameOver) {
@@ -137,7 +152,7 @@ const Panda = () => {
 
             <View style={styles.range}>
                 <Animated.View {...panResponder.panHandlers} style={{ width: 80, height: 115, position: 'absolute', left: pandaX, bottom: -50 }}>
-                    <Image source={panda} style={{ width: '100%', height: '100%', resizeMode: 'contain' }} />
+                    <Image source={currentSkin.image} style={{ width: '100%', height: '100%', resizeMode: 'contain' }} />
                 </Animated.View>
             </View>
 
@@ -263,5 +278,5 @@ const styles = StyleSheet.create({
 
 });
 
-export default Panda;
+export default Catch;
 

@@ -9,7 +9,7 @@ import BoardScreen from './src/screens/BoardScreen';
 import HmScreen from './src/screens/HmScreen';
 import PersonalScreen from './src/screens/PersonalScreen';
 import ShpScreen from './src/screens/ShpScreen';
-import PandaScreen from './src/screens/PandaScreen';
+import CatchScreen from './src/screens/CatchScreen';
 import StoryScreen from './src/screens/StoryScreen';
 
 enableScreens();
@@ -96,8 +96,8 @@ const App = () => {
                                     options={{ headerShown: false }} 
                               />
                               <Stack.Screen 
-                                    name="PandaScreen" 
-                                    component={PandaScreen} 
+                                    name="CatchScreen" 
+                                    component={CatchScreen} 
                                     options={{ headerShown: false }} 
                               />
                               <Stack.Screen 
