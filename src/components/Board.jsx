@@ -12,7 +12,7 @@ const imgs = [
 ];
 
 const ttls = [
-    "Welcome to Panda Catch!",
+    "Welcome to Panda Catch&Learn!",
     "Catch bamboo to earn points!",
     "Your panda has three lives",
     "Ready to play?"

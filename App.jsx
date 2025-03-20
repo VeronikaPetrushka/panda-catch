@@ -67,7 +67,7 @@ const App = () => {
                                 </Animated.View>
                                 {textVisible && (
                                     <Animated.Text style={[styles.text, { opacity: opacityAnim }]}>
-                                        Panda Catch
+                                        Panda Catch&Learn
                                     </Animated.Text>
                                 )}
                             </View>
